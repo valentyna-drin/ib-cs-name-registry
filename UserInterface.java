@@ -13,14 +13,17 @@
 // You should have received a copy of the GNU General Public License
 // along with this program.  If not, see <https://www.gnu.org/licenses/>.
 
-public class UserInterface
+import java.util.Scanner;
+
+public class UserInterface implements AutoCloseable
 {
   public UserInterface ()
   {
+    scanner = new Scanner (System.in);
   }
 
   // reads names from data source
-  public String[] readNames (DataSource dataSource)
+  public String[] readNames ()
   {
     // code to be written here
     return new String [0];
@@ -31,4 +34,21 @@ public class UserInterface
   {
     // code to be written here
   }
+
+  // returns next line (name), return value is empty string if no more
+  // names are available
+  private String readName ()
+  {
+    if (scanner.hasNextLine ())
+      return scanner.nextLine ();
+    else
+      return "";
+  }
+
+  public void close ()
+  {
+    scanner.close ();
+  }
+
+  private Scanner scanner;
 }
