@@ -35,8 +35,8 @@ public class UserInterface implements AutoCloseable
     // code to be written here
   }
 
-  // returns next line (name), return value is empty string if no more
-  // names are available
+  // returns next read name (line), return value is empty string if no
+  // more names are available
   private String readName ()
   {
     if (scanner.hasNextLine ())
