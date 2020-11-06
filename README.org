@@ -1,4 +1,4 @@
-* Very simple name registry application for practicing MVC
+* Simple name registry application for practicing MVC
 ** License
    Copyright (C) 2020 Jarmo Hurri
 
