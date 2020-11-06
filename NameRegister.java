@@ -20,7 +20,7 @@ public class NameRegister
     // code to be written here
   }
 
-  // adds a new name to register
+  // sets the names in the register
   public void setNames (String[] names)
   {
     // code to be written here
