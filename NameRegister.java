@@ -17,7 +17,6 @@ public class NameRegister
 {
   public NameRegister ()
   {
-    // code to be written here
   }
 
   // sets the names in the register
