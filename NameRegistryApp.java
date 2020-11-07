@@ -31,7 +31,7 @@ public class NameRegistryApp
   }
 
   // application logic
-  public static void run (NameRegister nameRegister, UserInterface ui)
+  private static void run (NameRegister nameRegister, UserInterface ui)
   {
     String[] names = ui.readNames (); // read names from user
     nameRegister.setNames (names); // store names into register
