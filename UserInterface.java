@@ -22,19 +22,6 @@ public class UserInterface implements AutoCloseable
     scanner = new Scanner (System.in);
   }
 
-  // reads names from data source
-  public String[] readNames ()
-  {
-    // code to be written here
-    return new String [0];
-  }
-
-  // prints names, each name on a separate line
-  public void showNames (String[] names)
-  {
-    // code to be written here
-  }
-
   // returns next read name (line), return value is empty string if no
   // more names are available
   private String readName ()
@@ -45,9 +32,24 @@ public class UserInterface implements AutoCloseable
       return "";
   }
 
+  // needed for implementation of AutoCloseable
   public void close ()
   {
-    scanner.close ();
+    if (scanner != null)
+      scanner.close ();
+  }
+
+  // returns an array of names read from the user
+  public String[] readNames ()
+  {
+    // code to be written here (note: use readName())
+    return new String [0];
+  }
+
+  // prints names, each name on a separate line
+  public void showNames (String[] names)
+  {
+    // code to be written here
   }
 
   private Scanner scanner;
