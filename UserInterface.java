@@ -17,9 +17,12 @@ import java.util.Scanner;
 
 public class UserInterface implements AutoCloseable
 {
+  private Scanner scanner;
+  private String[] newName;
+
   public UserInterface ()
   {
-    scanner = new Scanner (System.in);
+    scanner = new Scanner (System.in);  //why it is here?
   }
 
   // returns next read name (line), return value is empty string if no
@@ -33,7 +36,7 @@ public class UserInterface implements AutoCloseable
   }
 
   // needed for implementation of AutoCloseable
-  public void close ()
+  public void close ()  //how dis works??
   {
     if (scanner != null)
       scanner.close ();
@@ -42,15 +45,19 @@ public class UserInterface implements AutoCloseable
   // returns an array of names read from the user
   public String[] readNames ()
   {
-    // code to be written here (note: use readName())
-    return new String [0];
+    int i = 0;
+    newName = new String[5];
+    while (i < 5) {
+      newName[i] = readName();
+      i++;
+    }
+    return newName;
   }
 
   // prints names, each name on a separate line
   public void showNames (String[] names)
   {
-    // code to be written here
+    for(String name : newName)
+      System.out.println(name);
   }
-
-  private Scanner scanner;
 }
